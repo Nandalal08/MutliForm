@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MultiFormSeries</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <form id="form1">
+            <h3>Create Account</h3>
+            
+            <input type="text" placeholder="enter name" name="lname"><br>
+            
+            <input type="password" placeholder="enter password"><br>
+        
+            <input type="password" placeholder="confirm password">
+            <div class="btn">
+<button type="button" id="next1">Next</button>
+            </div>
+
+
+        </form>
+
+         <form id="form2">
+            <h3>Social Media</h3>
+            
+            <input type="text" placeholder="Instagram" name="lname"><br>
+            
+            <input type="text" placeholder="linkedln"><br>
+        
+            <input type="text" placeholder="Github">
+            <div class="btn">
+            <button type="button" id="prev1">Prev</button>
+
+            <button type="button" id="next2">Next</button>
+
+            </div>
+
+
+        </form>
+
+         <form id="form3">
+            <h3>Personal info</h3>
+            
+            <input type="text" placeholder="name" name="lname"><br>
+            
+            <input type="number" placeholder="age"><br>
+        
+            <input type="number" placeholder="mobile">
+            <div class="btn">
+<button type="button" id="prev2">Prev</button>
+
+<button type="button">Submit</button>
+            </div>
+
+
+        </form>
+        <div class="step-row">
+            <div id="progress"></div>
+            <div class="step-col">
+                <small>step 1</small>
+            </div>
+            <div class="step-col">
+                <small>step 2</small>
+            </div>
+            <div class="step-col">
+                <small>step 3</small>
+            </div>
+        </div>
+    </div>
+    <script>
+        var form1= document.getElementById("form1");
+        var form2= document.getElementById("form2");
+        var form3= document.getElementById("form3");
+
+        var next1 =document.getElementById("next1");
+        var next2 =document.getElementById("next2");
+        var prev1 =document.getElementById("prev1");
+        var prev2 = document.getElementById("prev2");
+        var progress =document.getElementById("progress");
+
+        next1.onclick = function(){
+            form1.style.left = "-500px";
+            form2.style.left ="50px";
+            progress.style.width ="250px"
+        }
+        prev1.onclick = function(){
+            form1.style.left = "50px";
+            form2.style.left ="500px";
+            progress.style.width ="125px"
+
+        }
+        next2.onclick = function(){
+           // form1.style.left = "-500px";
+            form2.style.left="-500px";
+            form3.style.left ="50px";
+            progress.style.width ="375px"
+
+        }
+         prev2.onclick = function(){
+            form2.style.left = "50px";
+            //form1.style.left ="500px";
+            form3.style.left ="500px";
+            progress.style.width ="250px"
+
+
+
+        }
+        
+    </script>
+</body>
+</html>
